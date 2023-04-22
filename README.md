@@ -36,3 +36,8 @@ make BR2_EXTERNAL=../Rainbarrel/ O=../build_rain raspberrypi4_64_rain_defconfig
 cd ../build_rain/
 make
 ```
+
+# Resources
+
+Outlet api docs: https://shelly-api-docs.shelly.cloud/gen1/#shelly-family-overview
+Buildroot manual: https://buildroot.org/downloads/manual/manual.html
