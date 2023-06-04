@@ -41,3 +41,22 @@ make
 
 Outlet api docs: https://shelly-api-docs.shelly.cloud/gen1/#shelly-family-overview
 Buildroot manual: https://buildroot.org/downloads/manual/manual.html
+
+# Soil Sensor
+
+I got it working by adding to config.txt:
+```
+dtparam=i2c1=on
+dtparam=i2c_arm=on
+```
+
+and running:
+```
+modprobe i2c-bcm2835
+modprobe i2c-dev
+```
+
+I read moisture with:
+```
+i2ctransfer -y 1 w2@0x36 0xf 0x10 r2@0x36
+```
